@@ -72,9 +72,9 @@ static const char *browsercmd[] = { "firefox", NULL };
 // Default File Explorer
 static const char *explorercmd[] = { "thunar", NULL };
 // Volume controls
-static const char *volup_cmd[]   = { "amixer", "-q", "-M", "set", "Master", "5%+", "unmute", NULL };
-static const char *voldowm_cmd[] = { "amixer", "-q", "-M", "set", "Master", "5%-", "unmute", NULL };
-static const char *voltoggle_cmd[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
+static const char *volup_cmd[]   = { "amixer", "-c", "1", "-q", "-M", "set", "Master", "1%+", "unmute", NULL };
+static const char *voldowm_cmd[] = { "amixer", "-c", "1", "-q", "-M", "set", "Master", "1%-", "unmute", NULL };
+static const char *voltoggle_cmd[] = { "amixer", "-c", "1", "-q", "set", "Master", "toggle", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -86,7 +86,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_e,      spawn,          {.v = explorercmd } },
 	{ MODKEY,                       XK_F5,     spawn,          {.v = voltoggle_cmd } },
 	{ MODKEY,                       XK_F8,     spawn,          {.v = volup_cmd } },
-	{ MODKEY,                       XK_F5,     spawn,          {.v = voldowm_cmd } },
+	{ MODKEY,                       XK_F7,     spawn,          {.v = voldowm_cmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
