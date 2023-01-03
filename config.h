@@ -1,19 +1,19 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrains Mono Nerd Font:size=10:antialias=true:autohint=true", "monospace:size=10"/* , "fontawesome:size=12" */ };
 static const char dmenufont[]       = "monospace:size=10";
 
-static const char norm_fg[] = "#EBDBB2";
-static const char norm_bg[] = "#282828";
-static const char norm_border[] = "#282828";
-static const char sel_fg[] = "#282828";
-static const char sel_bg[] = "#EBDBB2";
-static const char sel_border[] = "#EBDBB2";
+static const char norm_fg[] = "#6EC1D6";
+static const char norm_bg[] = "#1A2026";
+static const char norm_border[] = "#1A2026";
+static const char sel_fg[] = "#1A2026";
+static const char sel_bg[] = "#7FE4D2";
+static const char sel_border[] = "#7FE4D2";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
