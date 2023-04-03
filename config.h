@@ -48,6 +48,7 @@ static const Rule rules[] = {
 	{ "Alacritty",NULL,       NULL,       1,            0,           -1 },
 	{ "firefox",  NULL,       NULL,       2,            0,           -1 },
 	{ "Thunar",   NULL,       NULL,       1 << 2,            0,           -1 },
+	{ "Pcmanfm",   NULL,       NULL,       1 << 2,            0,           -1 },
 	{ "vlc",      NULL,       NULL,       1 << 3,            0,           -1 },
 };
 
@@ -101,7 +102,7 @@ static const char *rofi_window_cmd[] = { "rofi", "-show", "window", NULL };
 // Default Web Browser
 static const char *browsercmd[] = { "firefox", NULL };
 // Default File Explorer
-static const char *explorercmd[] = { "thunar", NULL };
+static const char *explorercmd[] = { "pcmanfm", NULL };
 // Volume controls
 static const char *volup_cmd[]   = { "amixer", "-c", "1", "-q", "-M", "set", "Master", "1%+", "unmute", NULL };
 static const char *voldowm_cmd[] = { "amixer", "-c", "1", "-q", "-M", "set", "Master", "1%-", "unmute", NULL };
