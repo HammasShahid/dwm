@@ -50,6 +50,7 @@ static const Rule rules[] = {
 	{ "Thunar",   NULL,       NULL,       1 << 2,            0,           -1 },
 	{ "Pcmanfm",   NULL,       NULL,       1 << 2,            0,           -1 },
 	{ "vlc",      NULL,       NULL,       1 << 3,            0,           -1 },
+	{ "xdman-Main",     NULL,       NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
