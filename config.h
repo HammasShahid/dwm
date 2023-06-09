@@ -18,15 +18,15 @@ static const int showsystray        = 1;     /* 0 means no systray */
 //
 static const int showbar            = 1;     /* 0 means no bar */
 static const int topbar             = 1;     /* 0 means bottom bar */
-static const char *fonts[]          = { "JetBrains Mono Nerd Font:size=10:antialias=true:autohint=true", "monospace:size=10"/* , "fontawesome:size=12" */ };
+static const char *fonts[]          = { "JetBrains Mono Nerd Font:size=9:style=bold:antialias=true:autohint=true", "monospace:size=10"/* , "fontawesome:size=12" */ };
 static const char dmenufont[]       = "monospace:size=10";
 
-static const char norm_fg[] = "#6EC1D6";
-static const char norm_bg[] = "#1A2026";
-static const char norm_border[] = "#1A2026";
-static const char sel_fg[] = "#1A2026";
-static const char sel_bg[] = "#7FE4D2";
-static const char sel_border[] = "#7FE4D2";
+static const char norm_fg[] = "#FFFFFF";
+static const char norm_bg[] = "#202020";
+static const char norm_border[] = "#242424";
+static const char sel_fg[] = "#FFFFFF";
+static const char sel_bg[] = "#664e43";
+static const char sel_border[] = "#664e43";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -35,7 +35,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "", "", "", "", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
