@@ -21,17 +21,17 @@ static const int topbar             = 1;     /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrains Mono Nerd Font:size=9:style=bold:antialias=true:autohint=true", "monospace:size=10"/* , "fontawesome:size=12" */ };
 static const char dmenufont[]       = "monospace:size=10";
 
-static const char norm_fg[] = "#FFFFFF";
-static const char norm_bg[] = "#202020";
-static const char norm_border[] = "#242424";
-static const char sel_fg[] = "#FFFFFF";
-static const char sel_bg[] = "#664e43";
-static const char sel_border[] = "#664e43";
+static char normfgcolor[]     = "#FFFFFF";
+static char normbgcolor[]     = "#202020";
+static char normbordercolor[] = "#242424";
+static char selfgcolor[]      =    "#FFFFFF";
+static char selbgcolor[]      = "#664e43";
+static char selbordercolor[]  = "#664e43";
 
-static const char *colors[][3]      = {
+static char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { norm_fg, norm_bg, norm_border },
-	[SchemeSel]  = { sel_fg, sel_bg,  sel_border  },
+	[SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
+	[SchemeSel]  = { selfgcolor, selbgcolor,  selbordercolor  },
 };
 
 /* tagging */
@@ -163,6 +163,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_F5,     xrdb,           {.v = NULL } },
 	TAGKEYS(                        XK_s,                      0)
 	TAGKEYS(                        XK_d,                      1)
 	TAGKEYS(                        XK_f,                      2)
