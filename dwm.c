@@ -1312,14 +1312,32 @@ loadxrdb()
     if (resm != NULL) {
       xrdb = XrmGetStringDatabase(resm);
 
+      // if (xrdb != NULL) {
+      //   XRDB_LOAD_COLOR("dwm.normbordercolor", normbordercolor);
+      //   XRDB_LOAD_COLOR("dwm.selbordercolor", selbordercolor);
+      //   XRDB_LOAD_COLOR("dwm.normbgcolor", normbgcolor);
+      //   XRDB_LOAD_COLOR("dwm.normfgcolor", normfgcolor);
+      //   XRDB_LOAD_COLOR("dwm.selfgcolor", selfgcolor);
+      //   XRDB_LOAD_COLOR("dwm.selbgcolor", selbgcolor);
+      // }
+      // Pywal's default color combination
       if (xrdb != NULL) {
-        XRDB_LOAD_COLOR("dwm.color0", normbordercolor);
-        XRDB_LOAD_COLOR("dwm.color8", selbordercolor);
+        XRDB_LOAD_COLOR("dwm.color8", normbordercolor);
+        XRDB_LOAD_COLOR("dwm.color15", selbordercolor);
         XRDB_LOAD_COLOR("dwm.color0", normbgcolor);
-        XRDB_LOAD_COLOR("dwm.color6", normfgcolor);
-        XRDB_LOAD_COLOR("dwm.color0", selfgcolor);
-        XRDB_LOAD_COLOR("dwm.color14", selbgcolor);
+        XRDB_LOAD_COLOR("dwm.color15", normfgcolor);
+        XRDB_LOAD_COLOR("dwm.color15", selfgcolor);
+        XRDB_LOAD_COLOR("dwm.color10", selbgcolor);
       }
+      // Found this color combination on someone's repo
+      // if (xrdb != NULL) {
+      //   XRDB_LOAD_COLOR("dwm.color0", normbordercolor);
+      //   XRDB_LOAD_COLOR("dwm.color8", selbordercolor);
+      //   XRDB_LOAD_COLOR("dwm.color0", normbgcolor);
+      //   XRDB_LOAD_COLOR("dwm.color6", normfgcolor);
+      //   XRDB_LOAD_COLOR("dwm.color0", selfgcolor);
+      //   XRDB_LOAD_COLOR("dwm.color14", selbgcolor);
+      // }
     }
   }
 
