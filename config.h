@@ -18,7 +18,7 @@ static const int showsystray        = 1;     /* 0 means no systray */
 //
 static const int showbar            = 1;     /* 0 means no bar */
 static const int topbar             = 1;     /* 0 means bottom bar */
-static const char *fonts[]          = { "JetBrains Mono Nerd Font:size=9:style=bold:antialias=true:autohint=true", "monospace:size=10"/* , "fontawesome:size=12" */ };
+static const char *fonts[]          = { "JetBrains Mono Nerd Font:size=9:style=bold:antialias=true:autohint=true", "NotoColorEmoji:pixelsize=10:antialias=true:autohint=true", "monospace:size=10", "fontawesome:size=12" };
 static const char dmenufont[]       = "monospace:size=10";
 
 static char normfgcolor[]     = "#FFFFFF";
