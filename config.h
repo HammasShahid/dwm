@@ -20,7 +20,7 @@ static const int showsystray        = 1;     /* 0 means no systray */
 //
 static const int showbar            = 1;     /* 0 means no bar */
 static const int topbar             = 1;     /* 0 means bottom bar */
-static const char *fonts[]          = { "JetBrains Mono Nerd Font:size=9:style=bold:antialias=true:autohint=true", "NotoColorEmoji:pixelsize=10:antialias=true:autohint=true", "monospace:size=10", "fontawesome:size=12" };
+static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=9:style=bold:antialias=true:autohint=true", "NotoColorEmoji:pixelsize=10:antialias=true:autohint=true", "monospace:size=10", "Font Awesome 6 Free:size=8:style=Solid:antialias=true:autohint=true" };
 static const char dmenufont[]       = "monospace:size=10";
 
 static char normfgcolor[]     = "#FFFFFF";
@@ -37,22 +37,27 @@ static char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "", "", "", "", "", "", "󰝚", "", "", "󰞮" };
 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	// { "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	// { "firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "Alacritty",NULL,       NULL,       1,            0,           -1 },
-	{ "firefox",  NULL,       NULL,       2,            0,           -1 },
-	{ "Thunar",   NULL,       NULL,       1 << 2,            0,           -1 },
-	{ "Pcmanfm",   NULL,       NULL,       1 << 2,            0,           -1 },
-	{ "vlc",      NULL,       NULL,       1 << 3,            0,           -1 },
-	{ "xdman-Main",     NULL,       NULL,       0,            1,           -1 },
+	/* class                     instance                title               tags mask     isfloating   monitor */
+	{ "Alacritty",               NULL,                   NULL,               2,            0,           -1 },
+	{ "firefox",                 NULL,                   NULL,               1 << 2,       0,           -1 },
+	{ "Thunar",                  NULL,                   NULL,               1 << 3,       0,           -1 },
+	{ "Pcmanfm",                 NULL,                   NULL,               1 << 3,       0,           -1 },
+	{ "Code",                    NULL,                   NULL,               1 << 4,       0,           -1 },
+	{ "vlc",                     NULL,                   NULL,               1 << 5,       0,           -1 },
+	{ "Spotify",                 NULL,                   NULL,               1 << 6,       0,           -1 },
+	{ NULL,                      NULL,                   "ncmpcpp",          1 << 6,       0,           -1 },
+	{ "Zathura",                 NULL,                   NULL,               1 << 7,       0,           -1 },
+	{ NULL,                      "libreoffice",          NULL,               1 << 7,       0,           -1 },
+	{ "qBittorrent",             NULL,                   NULL,               1 << 8,       0,           -1 },
+  { "mpv",                     "CCTV-Live",            NULL,               1 << 9,       0,           -1 },
+	{ "xdman-Main",              NULL,                   NULL,               0,            1,           -1 },
 };
 
 /* layout(s) */
@@ -168,15 +173,16 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_F5,     xrdb,           {.v = NULL } },
-	TAGKEYS(                        XK_s,                      0)
-	TAGKEYS(                        XK_d,                      1)
-	TAGKEYS(                        XK_f,                      2)
-	TAGKEYS(                        XK_v,                      3)
-	TAGKEYS(                        XK_5,                      4)
-	TAGKEYS(                        XK_6,                      5)
-	TAGKEYS(                        XK_7,                      6)
-	TAGKEYS(                        XK_8,                      7)
-	TAGKEYS(                        XK_9,                      8)
+	TAGKEYS(                        XK_a,                      0)
+	TAGKEYS(                        XK_s,                      1)
+	TAGKEYS(                        XK_d,                      2)
+	TAGKEYS(                        XK_f,                      3)
+	TAGKEYS(                        XK_c,                      4)
+	TAGKEYS(                        XK_v,                      5)
+	TAGKEYS(                        XK_z,                      6)
+	TAGKEYS(                        XK_7,                      7)
+	TAGKEYS(                        XK_8,                      8)
+	TAGKEYS(                        XK_9,                      9)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY|ControlMask|ShiftMask, XK_q,      quit,           {1} }, 
 };
